@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taller HTML5 y CSS</title>
+
+    <!-- CSS INTERNO -->
+    <style>
+        h1 {
+            font-family: Arial, sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+        h2 {
+            font-family: Georgia, serif;
+            font-style: italic;
+        }
+        h3 {
+            font-family: "Courier New", monospace;
+            text-decoration: underline;
+        }
+    </style>
+
+    <!-- CSS EXTERNO -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Taller de HTML5 y CSS</h1>
+
+    <!-- A. CSS EN LÍNEA -->
+    <h2 style="color: darkred; font-size: 32px; text-align: right;">
+        A. CSS en línea (Inline)
+    </h2>
+    <p>Este encabezado usa el atributo <code>style</code> directamente en la etiqueta
+       para cambiar color, tamaño y alineación. El CSS en línea tiene mayor prioridad
+       que el interno y el externo.</p>
+
+    <!-- B. CSS INTERNO -->
+    <h2>B. CSS interno (Internal)</h2>
+    <p>Las fuentes de los encabezados h1, h2 y h3 se definen en la etiqueta
+       <code>&lt;style&gt;</code> dentro del <code>&lt;head&gt;</code>.</p>
+
+    <!-- C. CSS EXTERNO -->
+    <h2>C. CSS externo (External)</h2>
+    <p>Los colores, fondos y bordes vienen del archivo <code>style.css</code>,
+       enlazado con la etiqueta <code>&lt;link&gt;</code>.</p>
+
+    <h3>Borde doble con esquinas de 30px</h3>
+    <h3 class="punteado">Borde punteado con esquinas de 30px</h3>
+    <h3 class="pildora">Esquinas de 50px (forma de píldora)</h3>
+    <h3 class="hoja">Esquinas diferentes: 40px 0 40px 0</h3>
+
+    <p><a href="formularios.html">Ir al formulario de registro →</a></p>
+</body>
+</html>

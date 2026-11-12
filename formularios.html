@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Estudiante</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Formulario de Registro de Estudiante</h1>
+
+    <form action="#" method="post" enctype="multipart/form-data">
+
+        <!-- A. DATOS PERSONALES -->
+        <fieldset>
+            <legend>Datos personales</legend>
+
+            <input type="hidden" name="codigoRegistro" value="1001">
+
+            <label for="codigoEstudiante">Código de estudiante:</label>
+            <input type="text" id="codigoEstudiante" name="codigoEstudiante"
+                   value="EST-0001" readonly>
+
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre"
+                   required minlength="3" maxlength="20"
+                   pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ ]+"
+                   title="Solo letras, entre 3 y 20 caracteres">
+
+            <label for="apellido">Apellido:</label>
+            <input type="text" id="apellido" name="apellido"
+                   required minlength="3" maxlength="20"
+                   pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ ]+"
+                   title="Solo letras, entre 3 y 20 caracteres">
+
+            <label for="edad">Edad:</label>
+            <input type="number" id="edad" name="edad"
+                   required min="1" max="100">
+
+            <label for="fechaNacimiento">Fecha de nacimiento:</label>
+            <input type="date" id="fechaNacimiento" name="fechaNacimiento">
+
+            <label for="hora">Hora:</label>
+            <input type="time" id="hora" name="hora">
+
+            <p class="etiqueta">Género:</p>
+            <label class="opcion">
+                <input type="radio" name="genero" value="masculino" required> Masculino
+            </label>
+            <label class="opcion">
+                <input type="radio" name="genero" value="femenino"> Femenino
+            </label>
+            <label class="opcion">
+                <input type="radio" name="genero" value="otro"> Otro
+            </label>
+        </fieldset>
+
+        <!-- B. DATOS DE CONTACTO -->
+        <fieldset>
+            <legend>Datos de contacto</legend>
+
+            <label for="correo">Correo electrónico:</label>
+            <input type="email" id="correo" name="correo"
+                   placeholder="ejemplo@correo.com">
+
+            <label for="telefono">Teléfono:</label>
+            <input type="tel" id="telefono" name="telefono"
+                   pattern="[0-9]{10}" maxlength="10"
+                   placeholder="0991234567"
+                   title="Ingrese 10 dígitos">
+
+            <label for="direccion">Dirección:</label>
+            <textarea id="direccion" name="direccion" rows="3" cols="30"></textarea>
+
+            <label for="ciudad">Ciudad:</label>
+            <select id="ciudad" name="ciudad">
+                <option value="">-- Seleccione --</option>
+                <option value="guayaquil">Guayaquil</option>
+                <option value="quito">Quito</option>
+                <option value="cuenca">Cuenca</option>
+                <option value="manta">Manta</option>
+                <option value="ambato">Ambato</option>
+            </select>
+        </fieldset>
+
+        <!-- C. INFORMACIÓN ADICIONAL -->
+        <fieldset>
+            <legend>Información adicional</legend>
+
+            <p class="etiqueta">Servicios de interés:</p>
+            <label class="opcion">
+                <input type="checkbox" name="servicios" value="biblioteca"> Biblioteca virtual
+            </label>
+            <label class="opcion">
+                <input type="checkbox" name="servicios" value="tutorias"> Tutorías
+            </label>
+            <label class="opcion">
+                <input type="checkbox" name="servicios" value="laboratorio"> Laboratorio de cómputo
+            </label>
+            <label class="opcion">
+                <input type="checkbox" name="servicios" value="empleo"> Bolsa de empleo
+            </label>
+
+            <label for="foto">Fotografía del estudiante:</label>
+            <input type="file" id="foto" name="foto" accept="image/*">
+        </fieldset>
+
+        <!-- D. BOTÓN DE ENVÍO -->
+        <button type="submit">Guardar</button>
+    </form>
+
+    <p><a href="index.html">← Volver al inicio</a></p>
+</body>
+</html>
